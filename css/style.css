@@ -35,6 +35,21 @@ nav li {
     margin: 0 auto;
 }
 
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: auto;
+
+}
+
+.workGrid {
+    display: grid;
+    grid-template-areas: Skill1 Skill2 Skill3;
+
+}
+
 footer {
     background-color: #373738;
     vertical-align: top;
@@ -50,3 +65,17 @@ footer li {
     color: white;
 }
 
+@media only screen and (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+        width: 100%;       
+        grid-template-rows: 300px 300px 300px ;
+        grid-template-columns: 1fr 1 fr 1fr;
+        grid-template-areas: 
+            "Skill1"
+            "Skill2"
+            "Skill3"
+            ;
+
+    }
+}
